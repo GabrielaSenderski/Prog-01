@@ -1,0 +1,95 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: INVESTIGAÇÃO CRIMINAL
+    Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+
+    const telefonou = prompt("Telefonou para a vítima?").toUpperCase();
+    const local = prompt("Esteve no local do crime?").toUpperCase();
+    const mora = prompt("Mora perto da vítima?").toUpperCase();
+    const dever = prompt("Devia para a vítima?").toUpperCase();
+    const trabalhar = prompt("Já trabalhou com a vítima?").toUpperCase();
+
+    let contador = 0
+
+    //PROCESSAMENTO
+
+    switch (telefonou) {
+        case "SIM":
+            contador++;
+            break;
+
+        default:
+            break;
+    }
+
+    switch (local) {
+        case "SIM":
+            contador++;
+            break;
+    
+        default:
+            break;
+    }
+
+    switch (mora) {
+        case "SIM":
+            contador++;
+            break;
+    
+        default:
+            break;
+    }
+
+    switch (dever) {
+        case "SIM":
+            contador++;
+            break;
+    
+        default:
+            break;
+    }
+
+    switch (trabalhar) {
+        case "SIM":
+            contador++; 
+            break;
+    
+        default:
+            break;
+    }
+
+    switch (contador) {
+        case 2:
+            document.write(`Suspeito`);
+            break;
+    
+        case 3:
+            document.write(`Cúmplice`);
+            break;
+
+        case 4:
+            document.write(`Cúmplice`);
+            break;
+
+        case 5:
+            document.write(`Assassino`);
+            break;
+
+        default:
+            document.write(`Inocente`);
+            break;
+    }
+
+    //SAÍDA
+
+</script>
